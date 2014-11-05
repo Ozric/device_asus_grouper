@@ -33,8 +33,6 @@ USE_PROPRIETARY_AUDIO_EXTENSIONS := false
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.grouper
 
-TARGET_RECOVERY_UI_LIB := librecovery_ui_grouper
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/grouper
 
 -include vendor/asus/grouper/BoardConfigVendor.mk
@@ -42,5 +40,6 @@ include device/asus/grouper/BoardConfigCommon.mk
 
 # use the new recovery.fstab
 RECOVERY_FSTAB_VERSION = 2
-
 TARGET_RECOVERY_FSTAB = device/asus/grouper/fstab.grouper
+
+MALLOC_IMPL := dlmalloc
